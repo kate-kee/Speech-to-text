@@ -14,12 +14,13 @@
     </div>
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
       <h1 class="display-4">Mp3 to text</h1>
-      <p class="lead">Quickly convert MP3 files in text</p>
-        <form action = "/update" method = "POST"  enctype = "multipart/form-data">
-            <input type="file" accept="audio/mp3" id="file" name="file">
-            <input class="btn btn-outline-primary my-2 my-md-0 mr-md-3" type="submit" value="Create a text file!">
-        </form>
+      <p class="lead">select a language</p>
+      {%for i in text %}
+              <a class="btn btn-outline-primary my-2 my-md-0 mr-md-3" href="/opt2/{{i}}/{{m}}" role="button">{{i}}</a>
+              &nbsp;&nbsp;
+    {% endfor %}
     </div>
+    
     <div class="container">
       <footer class="pt-4 my-md-5 pt-md-5 border-top">
         <div class="row">

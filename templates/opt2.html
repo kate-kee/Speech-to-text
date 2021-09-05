@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block head %}
 <title>Translate me</title>
 {% endblock %}
@@ -15,7 +14,7 @@
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
       <h1 class="display-4">Mp3 to text</h1>
       <p class="lead">Quickly convert MP3 files in text</p>
-        <form action = "/update" method = "POST"  enctype = "multipart/form-data">
+        <form action = "/update3/{{lang}}/{{m}}" method = "POST"  enctype = "multipart/form-data">
             <input type="file" accept="audio/mp3" id="file" name="file">
             <input class="btn btn-outline-primary my-2 my-md-0 mr-md-3" type="submit" value="Create a text file!">
         </form>

@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-
 {% block head %}
 <title>Translate me</title>
 {% endblock %}
 {% block body %}
+
 <body class="text-center" style="margin: 0px;">
   <div class="cover-container d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
       <h5 class="my-0 mr-md-auto font-weight-normal">Translate Me!</h5>
@@ -14,11 +14,11 @@
     </div>
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
       <h1 class="display-4">Mp3 to text</h1>
-      <p class="lead">Quickly convert MP3 files in text</p>
-        <form action = "/update" method = "POST"  enctype = "multipart/form-data">
-            <input type="file" accept="audio/mp3" id="file" name="file">
-            <input class="btn btn-outline-primary my-2 my-md-0 mr-md-3" type="submit" value="Create a text file!">
-        </form>
+      <p class="lead">Here's your audio file</p>  
+      <audio controls>
+        <source src="{{url_for('static', filename='one.mp3')}}" type="audio/mpeg">
+      
+    </audio>
     </div>
     <div class="container">
       <footer class="pt-4 my-md-5 pt-md-5 border-top">
@@ -43,5 +43,6 @@
     </div>
   
   </body>
-{% endblock %}
 
+
+    {% endblock %}
